@@ -1,0 +1,47 @@
+{
+  "info": {
+    "name": "Surplus Medicine API",
+    "_postman_id": "12345",
+    "description": "Test the backend API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Medicines",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/medicines",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "medicines"]
+        }
+      }
+    },
+    {
+      "name": "Add Medicine",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{
+  "name": "Paracetamol",
+  "quantity": 10,
+  "location": "Hostel A",
+  "contact": "9876543210"
+}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/medicines",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "medicines"]
+        }
+      }
+    }
+  ]
+}
